@@ -12,8 +12,20 @@ public class MCD {
 
     public static void main(String[] args) throws IOException {
         
-        int numero1, numero2;
+        Calculo calculo = new Calculo();
         
+        String mensaje = "";
+        
+        mensaje = calculo.mensajes();
+        System.out.println(mensaje);
+        
+        if(mensaje.equals("")){
+            System.out.println("El MCD de " + calculo.getNumero1() + " y " + 
+                        calculo.getNumero2() + " es: " + calculo.obtenerMCD
+                        (calculo.getNumero1(), calculo.getNumero2()));
+        }
+        
+        /**
         try{
             BufferedReader entradaTeclado = new BufferedReader(
                 new InputStreamReader(System.in));
@@ -41,6 +53,6 @@ public class MCD {
             System.out.println("Error al introducir datos: " +
                     e.getMessage());
         }
-        
+        */
     }
 }
